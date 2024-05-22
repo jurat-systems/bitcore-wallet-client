@@ -1555,6 +1555,7 @@ export class API extends EventEmitter {
   // * @param {Boolean} opts.doNotVerify
   // * @param {Numeric} opts.limit (optional) - Limit the resultset. Return all addresses by default.
   // * @param {Boolean} [opts.reverse=false] (optional) - Reverse the order of returned addresses.
+  // * @param {Boolean} [opts.includeChange=false] (optional) - Include change addresses in results.
   // * @param {Callback} cb
   // * @returns {Callback} cb - Return error or the array of addresses
   // */
@@ -1566,6 +1567,7 @@ export class API extends EventEmitter {
     var args = [];
     if (opts.limit) args.push('limit=' + opts.limit);
     if (opts.reverse) args.push('reverse=1');
+    if (opts.includeChange) args.push('includeChange=1');
     var qs = '';
     if (args.length > 0) {
       qs = '?' + args.join('&');
