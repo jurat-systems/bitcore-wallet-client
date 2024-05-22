@@ -978,6 +978,8 @@ let API = (() => {
                 args.push('limit=' + opts.limit);
             if (opts.reverse)
                 args.push('reverse=1');
+            if (opts.includeChange)
+                args.push('includeChange=1');
             var qs = '';
             if (args.length > 0) {
                 qs = '?' + args.join('&');

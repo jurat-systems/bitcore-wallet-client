@@ -1,6 +1,6 @@
 import 'source-map-support/register';
 export declare class Key {
-    
+    #private;
     id: any;
     use0forBCH: boolean;
     use44forMultisig: boolean;
